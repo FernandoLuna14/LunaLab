@@ -172,6 +172,7 @@ function updateCarousel() {
     const totalItems = items.length;
     const isMobile = window.innerWidth <= 768;
     const isTablet = window.innerWidth <= 1024;
+    const isSmallMobile = window.innerWidth <= 480;
 
     items.forEach((item, index) => {
         // Calculate relative position
@@ -198,7 +199,11 @@ function updateCarousel() {
         let spacing2 = 600;
         let spacing3 = 750;
 
-        if (isMobile) {
+        if (isSmallMobile) {
+            spacing1 = 220;
+            spacing2 = 330;
+            spacing3 = 430;
+        } else if (isMobile) {
             spacing1 = 280;  // Was 400, now 100px closer
             spacing2 = 420;  // Was 600, now 180px closer
             spacing3 = 550;  // Was 750, now 200px closer
