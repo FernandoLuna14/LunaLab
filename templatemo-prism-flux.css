@@ -34,6 +34,8 @@ https://templatemo.com/tm-600-prism-flux
 
 html {
 	scroll-behavior: smooth;
+	overflow-x: hidden;
+	width: 100%;
 }
 
 body {
@@ -41,6 +43,7 @@ body {
 	background: var(--primary-black);
 	color: var(--text-primary);
 	overflow-x: hidden;
+	width: 100%;
 	position: relative;
 }
 
@@ -104,7 +107,7 @@ body::after {
 	position: fixed;
 	top: 0;
 	left: 0;
-	width: 100%;
+	width: 100vw;
 	height: 100vh;
 	background: var(--primary-black);
 	display: flex;
@@ -372,6 +375,7 @@ body::after {
 	background: radial-gradient(ellipse at center,
 			rgba(153, 69, 255, 0.1) 0%,
 			transparent 50%);
+	overflow: hidden;
 }
 
 .carousel-container {
@@ -1631,6 +1635,14 @@ a.info-item {
 }
 
 @media (max-width: 480px) {
+	.nav-container {
+		padding: 10px 15px;
+	}
+
+	.logo-text {
+		font-size: 20px;
+	}
+
 	.hero {
 		padding: 100px 15px 60px;
 		min-height: auto;
