@@ -42,14 +42,15 @@ const skillsData = [
     { name: 'JavaScript', icon: '📜', category: 'frontend' },
     { name: 'Bootstrap', icon: '🅱️', category: 'frontend' },
     { name: 'PWA', icon: '📱', category: 'frontend' },
+    { name: 'IndexedDB', icon: '🗃️', category: 'frontend' },
     { name: 'PHP', icon: '🐘', category: 'backend' },
     { name: 'MySQL', icon: '🐬', category: 'backend' },
     { name: 'Node.js', icon: '🟢', category: 'backend' },
     { name: 'Express.js', icon: '🚂', category: 'backend' },
-    { name: 'IndexedDB', icon: '🗃️', category: 'frontend' },
-    { name: 'WhatsApp Web', icon: '💬', category: 'emerging' },
-    { name: 'Google Spreadsheets API', icon: '📊', category: 'cloud' },
-    { name: 'Generadores QR', icon: '🔳', category: 'emerging' }
+    { name: 'Hostinger', icon: '☁️', category: 'nube' },
+    { name: 'WhatsApp Web', icon: '💬', category: 'herramientas' },
+    { name: 'Google Sheets API', icon: '📊', category: 'herramientas' },
+    { name: 'Generadores QR', icon: '🔳', category: 'herramientas' }
 ];
 
 // Scroll to section function
