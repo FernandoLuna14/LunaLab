@@ -14,69 +14,42 @@ https://templatemo.com/tm-600-prism-flux
 const portfolioData = [
     {
         id: 1,
-        title: 'Sistema de Ventas',
+        title: 'Plataforma web para promoción y venta',
         description: 'Plataforma integral para gestión de inventario, facturación y reportes de ventas.',
         image: 'images/neural-network.jpg',
-        tech: ['React', 'Node.js', 'MongoDB']
+        tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL', 'Bootstrap', 'Hostinger']
     },
     {
         id: 2,
-        title: 'E-commerce Moderno',
-        description: 'Tienda en línea con pasarela de pagos segura y panel de administración avanzado.',
+        title: 'Sistema de gestión de restaurante ',
+        description: 'Aplicación que permite a restaurantes gestionar platillos e ingredientes con calculo automático de costos y precios de venta',
         image: 'images/quantum-cloud.jpg',
-        tech: ['Next.js', 'Stripe', 'Tailwind']
+        tech: ['HTML5', 'CSS3', 'JavaScript', 'PWA', 'IndexedDB']
     },
     {
         id: 3,
-        title: 'App de Gestión',
-        description: 'Aplicación web para control de citas, expedientes y recordatorios automáticos.',
+        title: 'Bot Reclutador de WhatsApp',
+        description: 'Sistema automatizado diseñado para agilizar y administrar el proceso de reclutamiento de empresas a través de WhatsApp',
         image: 'images/blockchain-vault.jpg',
-        tech: ['Vue.js', 'PHP', 'MySQL']
-    },
-    {
-        id: 4,
-        title: 'Portal Corporativo',
-        description: 'Sitio web optimizado para SEO con blog y sistema de captación de leads.',
-        image: 'images/cyber-defense.jpg',
-        tech: ['WordPress', 'PHP', 'CSS3']
-    },
-    {
-        id: 5,
-        title: 'Dashboard Analítico',
-        description: 'Panel de visualización de métricas y KPIs en tiempo real para seguimiento de datos.',
-        image: 'images/data-nexus.jpg',
-        tech: ['Python', 'Django', 'D3.js']
-    },
-    {
-        id: 6,
-        title: 'Plataforma Inmobiliaria',
-        description: 'Buscador de propiedades con mapas interactivos y filtros de búsqueda avanzados.',
-        image: 'images/ar-interface.jpg',
-        tech: ['React', 'Express', 'PostgreSQL']
-    },
-    {
-        id: 7,
-        title: 'Plataforma Educativa',
-        description: 'Sistema LMS interactivo con módulos, seguimiento de estudiantes y foros.',
-        image: 'images/iot-matrix.jpg',
-        tech: ['Angular', 'Node.js', 'Firebase']
+        tech: ['Node.js', 'WhatsApp Web', 'Google Spreadsheets API', 'Generadores QR', 'Express.js']
     }
 ];
 
 // Skills data
 const skillsData = [
-    { name: 'React.js', icon: '⚛️', level: 95, category: 'frontend' },
-    { name: 'Node.js', icon: '🟢', level: 90, category: 'backend' },
-    { name: 'TypeScript', icon: '📘', level: 88, category: 'frontend' },
-    { name: 'AWS', icon: '☁️', level: 92, category: 'cloud' },
-    { name: 'Docker', icon: '🐳', level: 85, category: 'cloud' },
-    { name: 'Python', icon: '🐍', level: 93, category: 'backend' },
-    { name: 'Kubernetes', icon: '☸️', level: 82, category: 'cloud' },
-    { name: 'GraphQL', icon: '◈', level: 87, category: 'backend' },
-    { name: 'TensorFlow', icon: '🤖', level: 78, category: 'emerging' },
-    { name: 'Blockchain', icon: '🔗', level: 75, category: 'emerging' },
-    { name: 'Vue.js', icon: '💚', level: 85, category: 'frontend' },
-    { name: 'MongoDB', icon: '🍃', level: 90, category: 'backend' }
+    { name: 'HTML / HTML5', icon: '🌐', category: 'frontend' },
+    { name: 'CSS / CSS3', icon: '🎨', category: 'frontend' },
+    { name: 'JavaScript', icon: '📜', category: 'frontend' },
+    { name: 'Bootstrap', icon: '🅱️', category: 'frontend' },
+    { name: 'PWA', icon: '📱', category: 'frontend' },
+    { name: 'PHP', icon: '🐘', category: 'backend' },
+    { name: 'MySQL', icon: '🐬', category: 'backend' },
+    { name: 'Node.js', icon: '🟢', category: 'backend' },
+    { name: 'Express.js', icon: '🚂', category: 'backend' },
+    { name: 'IndexedDB', icon: '🗃️', category: 'frontend' },
+    { name: 'WhatsApp Web', icon: '💬', category: 'emerging' },
+    { name: 'Google Spreadsheets API', icon: '📊', category: 'cloud' },
+    { name: 'Generadores QR', icon: '🔳', category: 'emerging' }
 ];
 
 // Scroll to section function
@@ -293,10 +266,6 @@ function initSkillsGrid() {
                             <div class="hexagon-content">
                                 <div class="skill-icon-hex">${skill.icon}</div>
                                 <div class="skill-name-hex">${skill.name}</div>
-                                <div class="skill-level">
-                                    <div class="skill-level-fill" style="width: ${skill.level}%"></div>
-                                </div>
-                                <div class="skill-percentage-hex">${skill.level}%</div>
                             </div>
                         </div>
                     `;
