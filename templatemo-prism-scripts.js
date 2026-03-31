@@ -1,4 +1,4 @@
-// JavaScript Document
+// Documento JavaScript
 
 /*
 
@@ -9,7 +9,7 @@ https://templatemo.com/tm-600-prism-flux
 */
 
 
-// Portfolio data for carousel
+// Datos del portafolio para el carrusel
 
 const portfolioData = [
     {
@@ -35,7 +35,7 @@ const portfolioData = [
     }
 ];
 
-// Skills data
+// Datos de habilidades
 const skillsData = [
     { name: 'HTML / HTML5', icon: 'imagenes/logohtml5.ico', category: 'frontend' },
     { name: 'CSS / CSS3', icon: 'imagenes/logocss3.ico', category: 'frontend' },
@@ -53,7 +53,7 @@ const skillsData = [
     { name: 'Generadores QR', icon: 'imagenes/logoqr.ico', category: 'herramientas' }
 ];
 
-// Scroll to section function
+// Función para desplazarse a una sección
 function scrollToSection(sectionId) {
     const section = document.getElementById(sectionId);
     const header = document.getElementById('header');
@@ -67,7 +67,7 @@ function scrollToSection(sectionId) {
     }
 }
 
-// Initialize particles for philosophy section
+// Inicializar partículas para la sección de filosofía
 function initParticles() {
     const particlesContainer = document.getElementById('particles');
     const particleCount = 15;
@@ -76,23 +76,23 @@ function initParticles() {
         const particle = document.createElement('div');
         particle.className = 'particle';
 
-        // Random horizontal position
+        // Posición horizontal aleatoria
         particle.style.left = Math.random() * 100 + '%';
 
-        // Start particles at random vertical positions throughout the section
+        // Iniciar partículas en posiciones verticales aleatorias a lo largo de la sección
         particle.style.top = Math.random() * 100 + '%';
 
-        // Random animation delay for natural movement
+        // Retardo de animación aleatorio para un movimiento natural
         particle.style.animationDelay = Math.random() * 20 + 's';
 
-        // Random animation duration for variety
+        // Duración de animación aleatoria para dar variedad
         particle.style.animationDuration = (18 + Math.random() * 8) + 's';
 
         particlesContainer.appendChild(particle);
     }
 }
 
-// Initialize carousel
+// Inicializar carrusel
 let currentIndex = 0;
 const carousel = document.getElementById('carousel');
 const indicatorsContainer = document.getElementById('indicators');
@@ -123,12 +123,12 @@ function createCarouselItem(data, index) {
 }
 
 function initCarousel() {
-    // Create carousel items
+    // Crear elementos del carrusel
     portfolioData.forEach((data, index) => {
         const item = createCarouselItem(data, index);
         carousel.appendChild(item);
 
-        // Create indicator
+        // Crear indicador
         const indicator = document.createElement('div');
         indicator.className = 'indicator';
         if (index === 0) indicator.classList.add('active');
@@ -149,10 +149,10 @@ function updateCarousel() {
     const isSmallMobile = window.innerWidth <= 480;
 
     items.forEach((item, index) => {
-        // Calculate relative position
+        // Calcular posición relativa
         let offset = index - currentIndex;
 
-        // Wrap around for continuous rotation
+        // Envolver para rotación continua
         if (offset > totalItems / 2) {
             offset -= totalItems;
         } else if (offset < -totalItems / 2) {
@@ -162,13 +162,13 @@ function updateCarousel() {
         const absOffset = Math.abs(offset);
         const sign = offset < 0 ? -1 : 1;
 
-        // Reset transform
+        // Restablecer transformación
         item.style.transform = '';
         item.style.opacity = '';
         item.style.zIndex = '';
         item.style.transition = 'all 0.8s cubic-bezier(0.4, 0.0, 0.2, 1)';
 
-        // Adjust spacing based on screen size
+        // Ajustar espaciado según el tamaño de la pantalla
         let spacing1 = 400;
         let spacing2 = 600;
         let spacing3 = 750;
@@ -188,12 +188,12 @@ function updateCarousel() {
         }
 
         if (absOffset === 0) {
-            // Center item
+            // Elemento central
             item.style.transform = 'translate(-50%, -50%) translateZ(0) scale(1)';
             item.style.opacity = '1';
             item.style.zIndex = '10';
         } else if (absOffset === 1) {
-            // Side items
+            // Elementos laterales
             const translateX = sign * spacing1;
             const rotation = isMobile ? 25 : 30;
             const scale = isMobile ? 0.88 : 0.85;
@@ -201,7 +201,7 @@ function updateCarousel() {
             item.style.opacity = '0.8';
             item.style.zIndex = '5';
         } else if (absOffset === 2) {
-            // Further side items
+            // Elementos laterales más alejados
             const translateX = sign * spacing2;
             const rotation = isMobile ? 35 : 40;
             const scale = isMobile ? 0.75 : 0.7;
@@ -209,7 +209,7 @@ function updateCarousel() {
             item.style.opacity = '0.5';
             item.style.zIndex = '3';
         } else if (absOffset === 3) {
-            // Even further items
+            // Elementos aún más alejados
             const translateX = sign * spacing3;
             const rotation = isMobile ? 40 : 45;
             const scale = isMobile ? 0.65 : 0.6;
@@ -217,14 +217,14 @@ function updateCarousel() {
             item.style.opacity = '0.3';
             item.style.zIndex = '2';
         } else {
-            // Hidden items (behind)
+            // Elementos ocultos (detrás)
             item.style.transform = 'translate(-50%, -50%) translateZ(-500px) scale(0.5)';
             item.style.opacity = '0';
             item.style.zIndex = '1';
         }
     });
 
-    // Update indicators
+    // Actualizar indicadores
     indicators.forEach((indicator, index) => {
         indicator.classList.toggle('active', index === currentIndex);
     });
@@ -245,7 +245,7 @@ function goToSlide(index) {
     updateCarousel();
 }
 
-// Initialize hexagonal skills grid
+// Inicializar cuadrícula hexagonal de habilidades
 function initSkillsGrid() {
     const skillsGrid = document.getElementById('skillsGrid');
     const categoryTabs = document.querySelectorAll('.category-tab');
@@ -286,20 +286,20 @@ function initSkillsGrid() {
     displaySkills();
 }
 
-// Event listeners
+// Escuchadores de eventos
 document.getElementById('nextBtn').addEventListener('click', nextSlide);
 document.getElementById('prevBtn').addEventListener('click', prevSlide);
 
-// Auto-rotate carousel
+// Rotación automática del carrusel
 setInterval(nextSlide, 5000);
 
-// Keyboard navigation
+// Navegación por teclado
 document.addEventListener('keydown', (e) => {
     if (e.key === 'ArrowLeft') prevSlide();
     if (e.key === 'ArrowRight') nextSlide();
 });
 
-// Update carousel on window resize
+// Actualizar carrusel al cambiar el tamaño de la ventana
 let resizeTimeout;
 window.addEventListener('resize', () => {
     clearTimeout(resizeTimeout);
@@ -308,12 +308,12 @@ window.addEventListener('resize', () => {
     }, 250);
 });
 
-// Initialize on load
+// Inicializar al cargar
 initCarousel();
 initSkillsGrid();
 initParticles();
 
-// Mobile menu toggle
+// Alternar menú móvil
 const menuToggle = document.getElementById('menuToggle');
 const navMenu = document.getElementById('navMenu');
 
@@ -322,7 +322,7 @@ menuToggle.addEventListener('click', () => {
     menuToggle.classList.toggle('active');
 });
 
-// Header scroll effect
+// Efecto de desplazamiento del encabezado
 const header = document.getElementById('header');
 window.addEventListener('scroll', () => {
     if (window.scrollY > 100) {
@@ -332,7 +332,7 @@ window.addEventListener('scroll', () => {
     }
 });
 
-// Smooth scrolling and active navigation
+// Desplazamiento suave y navegación activa
 const sections = document.querySelectorAll('section[id]');
 const navLinks = document.querySelectorAll('.nav-link');
 
@@ -351,14 +351,14 @@ navLinks.forEach(link => {
                 behavior: 'smooth'
             });
 
-            // Close mobile menu if open
+            // Cerrar menú móvil si está abierto
             navMenu.classList.remove('active');
             menuToggle.classList.remove('active');
         }
     });
 });
 
-// Update active navigation on scroll
+// Actualizar navegación activa al desplazarse
 function updateActiveNav() {
     const scrollPosition = window.scrollY + 100;
 
@@ -381,7 +381,7 @@ function updateActiveNav() {
 
 window.addEventListener('scroll', updateActiveNav);
 
-// Animated counter for stats
+// Contador animado para estadísticas
 function animateCounter(element) {
     const target = parseInt(element.dataset.target);
     const duration = 2000;
@@ -399,7 +399,7 @@ function animateCounter(element) {
     }, 16);
 }
 
-// Intersection Observer for stats animation
+// Intersection Observer para animación de estadísticas
 const observerOptions = {
     threshold: 0.5,
     rootMargin: '0px 0px -100px 0px'
@@ -424,23 +424,55 @@ if (statsSection) {
     observer.observe(statsSection);
 }
 
-// Form submission
+// Envío del formulario
 const contactForm = document.getElementById('contactForm');
-contactForm.addEventListener('submit', (e) => {
+contactForm.addEventListener('submit', async (e) => {
     e.preventDefault();
 
-    // Get form data
+    // Obtener datos del formulario
     const formData = new FormData(contactForm);
     const data = Object.fromEntries(formData);
+    const submitBtn = contactForm.querySelector('.submit-btn');
+    const originalBtnText = submitBtn.textContent;
 
-    // Show success message
-    alert(`¡Gracias ${data.name}! Tu mensaje ha sido enviado exitosamente. Me pondré en contacto contigo pronto.`);
+    try {
+        submitBtn.textContent = 'Enviando...';
+        submitBtn.disabled = true;
 
-    // Reset form
-    contactForm.reset();
+        // IMPORTANTE: Reemplaza "TU_ID_DE_FORMSPREE" con el ID real de tu formulario (ej. mxyzabcd)
+        const formspreeUrl = 'https://formspree.io/f/mqegbvln';
+
+        const response = await fetch(formspreeUrl, {
+            method: 'POST',
+            body: formData,
+            headers: {
+                'Accept': 'application/json'
+            }
+        });
+
+        if (response.ok) {
+            // Mostrar mensaje de éxito
+            alert(`¡Gracias ${data.name}! Tu mensaje ha sido enviado exitosamente. Me pondré en contacto contigo pronto.`);
+            // Restablecer formulario
+            contactForm.reset();
+        } else {
+            const result = await response.json();
+            if (Object.hasOwn(result, 'errors')) {
+                alert(result.errors.map(error => error.message).join(", "));
+            } else {
+                alert('Hubo un problema al enviar tu mensaje. Por favor, intenta nuevamente.');
+            }
+        }
+    } catch (error) {
+        alert('Hubo un error de conexión. Por favor, revisa tu internet e intenta de nuevo.');
+        console.error('Error:', error);
+    } finally {
+        submitBtn.textContent = originalBtnText;
+        submitBtn.disabled = false;
+    }
 });
 
-// Loading screen
+// Pantalla de carga
 window.addEventListener('load', () => {
     setTimeout(() => {
         const loader = document.getElementById('loader');
@@ -448,7 +480,7 @@ window.addEventListener('load', () => {
     }, 1500);
 });
 
-// Add parallax effect to hero section
+// Agregar efecto parallax a la sección hero
 window.addEventListener('scroll', () => {
     const scrolled = window.pageYOffset;
     const parallax = document.querySelector('.hero');
