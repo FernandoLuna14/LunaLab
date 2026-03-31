@@ -1056,6 +1056,15 @@ body::after {
 	margin-bottom: 15px;
 	color: var(--accent-purple);
 	animation: float 3s ease-in-out infinite;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.skill-icon-hex img {
+	width: 60px;
+	height: 60px;
+	object-fit: contain;
 }
 
 @keyframes float {

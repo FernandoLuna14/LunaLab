@@ -16,41 +16,41 @@ const portfolioData = [
         id: 1,
         title: 'Plataforma web para promoción y venta',
         description: 'Plataforma integral para gestión de inventario, facturación y reportes de ventas.',
-        image: 'images/neural-network.jpg',
+        image: 'imagenes/neural-network.jpg',
         tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL', 'Bootstrap', 'Hostinger']
     },
     {
         id: 2,
         title: 'Sistema de gestión de restaurante ',
         description: 'Aplicación que permite a restaurantes gestionar platillos e ingredientes con calculo automático de costos y precios de venta',
-        image: 'images/quantum-cloud.jpg',
+        image: 'imagenes/quantum-cloud.jpg',
         tech: ['HTML5', 'CSS3', 'JavaScript', 'PWA', 'IndexedDB']
     },
     {
         id: 3,
         title: 'Bot Reclutador de WhatsApp',
         description: 'Sistema automatizado diseñado para agilizar y administrar el proceso de reclutamiento de empresas a través de WhatsApp',
-        image: 'images/blockchain-vault.jpg',
+        image: 'imagenes/blockchain-vault.jpg',
         tech: ['Node.js', 'WhatsApp Web', 'Google Spreadsheets API', 'Generadores QR', 'Express.js']
     }
 ];
 
 // Skills data
 const skillsData = [
-    { name: 'HTML / HTML5', icon: '🌐', category: 'frontend' },
-    { name: 'CSS / CSS3', icon: '🎨', category: 'frontend' },
-    { name: 'JavaScript', icon: '📜', category: 'frontend' },
-    { name: 'Bootstrap', icon: '🅱️', category: 'frontend' },
-    { name: 'PWA', icon: '📱', category: 'frontend' },
-    { name: 'IndexedDB', icon: '🗃️', category: 'frontend' },
-    { name: 'PHP', icon: '🐘', category: 'backend' },
-    { name: 'MySQL', icon: '🐬', category: 'backend' },
-    { name: 'Node.js', icon: '🟢', category: 'backend' },
-    { name: 'Express.js', icon: '🚂', category: 'backend' },
-    { name: 'Hostinger', icon: '☁️', category: 'nube' },
-    { name: 'WhatsApp Web', icon: '💬', category: 'herramientas' },
-    { name: 'Google Sheets API', icon: '📊', category: 'herramientas' },
-    { name: 'Generadores QR', icon: '🔳', category: 'herramientas' }
+    { name: 'HTML / HTML5', icon: 'imagenes/logohtml5.ico', category: 'frontend' },
+    { name: 'CSS / CSS3', icon: 'imagenes/logocss3.ico', category: 'frontend' },
+    { name: 'JavaScript', icon: 'imagenes/logojs.ico', category: 'frontend' },
+    { name: 'Bootstrap', icon: 'imagenes/logobootsrap.ico', category: 'frontend' },
+    { name: 'PWA', icon: 'imagenes/logpwa.ico', category: 'frontend' },
+    { name: 'IndexedDB', icon: 'imagenes/logoindexeddb.ico', category: 'frontend' },
+    { name: 'PHP', icon: 'imagenes/logophp.ico', category: 'backend' },
+    { name: 'MySQL', icon: 'imagenes/logomysql.ico', category: 'backend' },
+    { name: 'Node.js', icon: 'imagenes/logonodejs.ico', category: 'backend' },
+    { name: 'Express.js', icon: 'imagenes/logoexpress.ico', category: 'backend' },
+    { name: 'Hostinger', icon: 'imagenes/logohostinger.ico', category: 'nube' },
+    { name: 'WhatsApp Web', icon: 'imagenes/logowhatsapp.ico', category: 'herramientas' },
+    { name: 'Google Sheets API', icon: 'imagenes/logosheets.ico', category: 'herramientas' },
+    { name: 'Generadores QR', icon: 'imagenes/logoqr.ico', category: 'herramientas' }
 ];
 
 // Scroll to section function
@@ -265,7 +265,7 @@ function initSkillsGrid() {
             hexagon.innerHTML = `
                         <div class="hexagon-inner">
                             <div class="hexagon-content">
-                                <div class="skill-icon-hex">${skill.icon}</div>
+                                <div class="skill-icon-hex"><img src="${skill.icon}" alt="${skill.name}"></div>
                                 <div class="skill-name-hex">${skill.name}</div>
                             </div>
                         </div>
