@@ -47,7 +47,7 @@ body {
 	position: relative;
 }
 
-/* Carbon Fiber Background Pattern */
+/* Patrón de Fondo de Fibra de Carbono */
 body::before {
 	content: '';
 	position: fixed;
@@ -75,7 +75,7 @@ body::before {
 	z-index: -2;
 }
 
-/* Animated Grid Overlay */
+/* Superposición de Cuadrícula Animada */
 body::after {
 	content: '';
 	position: fixed;
@@ -102,7 +102,7 @@ body::after {
 	}
 }
 
-/* Loading Screen */
+/* Pantalla de Carga */
 .loader {
 	position: fixed;
 	top: 0;
@@ -173,7 +173,7 @@ body::after {
 	}
 }
 
-/* Navigation Header */
+/* Encabezado de Navegación */
 .header {
 	position: fixed;
 	top: 0;
@@ -217,7 +217,7 @@ body::after {
 	position: relative;
 }
 
-/* Prism-inspired logo */
+/* Logo inspirado en prisma */
 .logo-prism {
 	width: 100%;
 	height: 100%;
@@ -364,7 +364,7 @@ body::after {
 	transform: rotate(45deg) translate(-5px, -6px);
 }
 
-/* Hero Section with 3D Carousel */
+/* Sección Principal con Carrusel 3D */
 .hero {
 	min-height: 100vh;
 	display: flex;
@@ -537,7 +537,7 @@ body::after {
 	box-shadow: 0 8px 25px rgba(153, 69, 255, 0.5);
 }
 
-/* Carousel Controls */
+/* Controles del Carrusel */
 .carousel-controls {
 	position: absolute;
 	bottom: -70px;
@@ -600,7 +600,7 @@ body::after {
 	transform: scale(1.3);
 }
 
-/* NEW: Prism Philosophy Section */
+/* NUEVA: Sección de Filosofía del Prisma */
 .philosophy-section {
 	padding: 120px 30px;
 	background: linear-gradient(180deg,
@@ -617,7 +617,7 @@ body::after {
 	text-align: center;
 }
 
-/* Animated Prism Line */
+/* Línea de Prisma Animada */
 .prism-line {
 	width: 100%;
 	height: 2px;
@@ -822,7 +822,7 @@ body::after {
 	width: 100%;
 }
 
-/* Particle Effect Background */
+/* Fondo de Efecto de Partículas */
 .philosophy-particles {
 	position: absolute;
 	width: 100%;
@@ -863,7 +863,7 @@ body::after {
 	}
 }
 
-/* Stats Section with Content */
+/* Sección de Estadísticas con Contenido */
 .stats-section {
 	padding: 120px 30px;
 	background: linear-gradient(180deg,
@@ -965,7 +965,7 @@ body::after {
 	padding: 0 10px;
 }
 
-/* Enhanced Skills Section - Technical Arsenal */
+/* Sección de Habilidades Mejoradas - Arsenal Técnico */
 .skills-section {
 	padding: 120px 30px;
 	background: var(--carbon-dark);
@@ -1002,7 +1002,7 @@ body::after {
 	margin: 0 auto;
 }
 
-/* Hexagonal Skills Grid */
+/* Cuadrícula Hexagonal de Habilidades */
 .skills-hexagon-grid {
 	display: flex;
 	flex-wrap: wrap;
@@ -1122,7 +1122,7 @@ body::after {
 	font-weight: 600;
 }
 
-/* Skill Categories Tabs */
+/* Pestañas de Categorías de Habilidades */
 .skill-categories {
 	display: flex;
 	justify-content: center;
@@ -1157,7 +1157,7 @@ body::after {
 	box-shadow: 0 5px 20px rgba(153, 69, 255, 0.3);
 }
 
-/* Contact Section */
+/* Sección de Contacto */
 .contact-section {
 	padding: 120px 30px;
 	background: linear-gradient(180deg,
@@ -1270,7 +1270,7 @@ a.info-item {
 	color: var(--text-primary);
 }
 
-/* Add external link indicator for clickable items */
+/* Agregar indicador de enlace externo para elementos clicables */
 .info-item[target="_blank"] .info-text p::after {
 	content: ' ↗';
 	font-size: 12px;
@@ -1349,7 +1349,7 @@ a.info-item {
 	box-shadow: 0 8px 25px rgba(153, 69, 255, 0.5);
 }
 
-/* Footer */
+/* Pie de Página */
 .footer {
 	padding: 60px 30px 30px;
 	background: var(--primary-black);
@@ -1466,7 +1466,7 @@ a.info-item {
 	text-decoration: underline;
 }
 
-/* Responsive Design */
+/* Diseño Responsivo */
 @media (max-width: 1024px) {
 	.carousel-item {
 		width: 350px;
