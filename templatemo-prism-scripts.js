@@ -16,22 +16,25 @@ const portfolioData = [
         id: 1,
         title: 'Plataforma web para promoción y venta',
         description: 'Plataforma integral para gestión de inventario, facturación y reportes de ventas.',
-        image: 'imagenes/neural-network.jpg',
-        tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL', 'Bootstrap', 'Hostinger']
+        image: 'imagenes/proyectos/empresa.png',
+        tech: ['HTML', 'CSS', 'JavaScript', 'PHP', 'MySQL', 'Bootstrap', 'Hostinger'],
+        link: 'https://pbyrm.com.mx/'
     },
     {
         id: 2,
         title: 'Sistema de gestión de restaurante ',
         description: 'Aplicación que permite a restaurantes gestionar platillos e ingredientes con calculo automático de costos y precios de venta',
-        image: 'imagenes/quantum-cloud.jpg',
-        tech: ['HTML5', 'CSS3', 'JavaScript', 'PWA', 'IndexedDB']
+        image: 'imagenes/proyectos/restaurante.jpeg',
+        tech: ['HTML5', 'CSS3', 'JavaScript', 'PWA', 'IndexedDB'],
+        link: 'proyecto-restaurante.html'
     },
     {
         id: 3,
         title: 'Bot Reclutador de WhatsApp',
         description: 'Sistema automatizado diseñado para agilizar y administrar el proceso de reclutamiento de empresas a través de WhatsApp',
-        image: 'imagenes/blockchain-vault.jpg',
-        tech: ['Node.js', 'WhatsApp Web', 'Google Spreadsheets API', 'Generadores QR', 'Express.js']
+        image: 'imagenes/proyectos/bot_whatsapp.jpeg',
+        tech: ['Node.js', 'WhatsApp Web', 'Google Spreadsheets API', 'Generadores QR', 'Express.js'],
+        link: 'proyecto-bot.html'
     }
 ];
 
@@ -115,7 +118,7 @@ function createCarouselItem(data, index) {
                     <h3 class="card-title">${data.title}</h3>
                     <p class="card-description">${data.description}</p>
                     <div class="card-tech">${techBadges}</div>
-                    <button class="card-cta" onclick="scrollToSection('about')">Ver más</button>
+                    <button class="card-cta" onclick="window.open('${data.link}', '_blank')">Ver más</button>
                 </div>
             `;
 

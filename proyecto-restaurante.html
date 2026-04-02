@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sistema de Gestión de Restaurante - Luna Lab</title>
+    <link rel="icon" href="imagenes/logo.ico" type="image/x-icon">
+    <link rel="stylesheet" href="templatemo-prism-flux.css?v=8">
+    <style>
+        .project-detail-section {
+            padding: 150px 20px 80px;
+            max-width: 1000px;
+            margin: 0 auto;
+            color: #fff;
+            min-height: 80vh;
+        }
+
+        .back-btn {
+            display: inline-block;
+            margin-bottom: 30px;
+            color: var(--accent-cyan);
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 18px;
+            transition: color 0.3s;
+        }
+
+        .back-btn:hover {
+            color: var(--accent-purple);
+        }
+
+        .project-title {
+            font-size: 3rem;
+            margin-bottom: 20px;
+            background: linear-gradient(135deg, var(--text-primary), var(--accent-purple));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .project-desc {
+            font-size: 1.1rem;
+            line-height: 1.8;
+            color: var(--text-secondary);
+            margin-bottom: 40px;
+            background: var(--carbon-medium);
+            padding: 25px;
+            border-radius: 12px;
+            border: 1px solid var(--metal-dark);
+        }
+
+        .screenshot-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+            gap: 30px;
+        }
+
+        .screenshot-card {
+            background: var(--carbon-dark);
+            border: 1px solid var(--metal-dark);
+            border-radius: 10px;
+            overflow: hidden;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.5);
+            transition: transform 0.3s;
+        }
+
+        .screenshot-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(153, 69, 255, 0.4);
+        }
+
+        .screenshot-card img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-bottom: 1px solid var(--metal-dark);
+            cursor: zoom-in;
+            transition: opacity 0.3s;
+        }
+        
+        .screenshot-card img:hover {
+            opacity: 0.8;
+        }
+
+        .screenshot-caption {
+            padding: 15px;
+            text-align: center;
+            color: var(--text-secondary);
+            font-size: 15px;
+            font-weight: bold;
+        }
+
+        /* Lightbox - Modal */
+        .lightbox {
+            display: none;
+            position: fixed;
+            z-index: 9999;
+            left: 0;
+            top: 0;
+            width: 100%;
+            height: 100%;
+            overflow: auto;
+            background-color: rgba(0, 0, 0, 0.85); /* Fondo oscuro con transparencia */
+            backdrop-filter: blur(8px);
+        }
+        .lightbox-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 85vh;
+            margin-top: 3vh;
+            border-radius: 8px;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.6);
+            animation: zoomIn 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+            object-fit: contain;
+        }
+        @keyframes zoomIn {
+            from {transform: scale(0.85); opacity: 0;}
+            to {transform: scale(1); opacity: 1;}
+        }
+        .lightbox-close {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 45px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+            z-index: 10000;
+        }
+        .lightbox-close:hover,
+        .lightbox-close:focus {
+            color: var(--accent-red);
+            text-decoration: none;
+        }
+        .lightbox-caption-text {
+            margin: auto;
+            display: block;
+            width: 80%;
+            max-width: 700px;
+            text-align: center;
+            color: #ccc;
+            padding: 15px 0;
+            font-size: 20px;
+            font-weight: bold;
+            animation: zoomIn 0.4s;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="header scrolled" id="header">
+        <nav class="nav-container">
+            <a href="index.html" class="logo">
+                <img src="imagenes/logo.ico" alt="Luna Lab Logo"
+                    style="height: 40px; margin-right: 12px; border-radius: 4px;">
+                <span class="logo-text">
+                    <span class="prism">LUNA</span>
+                    <span class="flux">LAB</span>
+                </span>
+            </a>
+        </nav>
+    </header>
+
+    <main class="project-detail-section">
+        <a href="index.html" class="back-btn">← Volver al Portafolio</a>
+        <h1 class="project-title">Sistema de Gestión de Restaurante</h1>
+
+        <div class="project-desc">
+            <p>Aplicación web diseñada específicamente para optimizar la gestión interna de restaurantes. Permite a los
+                administradores registrar y modificar menús, platillos e inventario de ingredientes.</p>
+            <br>
+            <p>Su núcleo más fuerte reside en el motor matemático central que permite <strong>calcular automáticamente
+                    los costos exactos</strong> y sugerir los mejores precios de venta en función a métricas de
+                rentabilidad. Se desarrolló utilizando un entorno sin servidores centralizados gracias al uso exhaustivo
+                de <strong>IndexedDB y PWA</strong>, lo que permite trabajar intermitentemente sin depender enteramente
+                de Internet.</p>
+        </div>
+
+        <h2 style="margin-bottom: 25px; color: var(--accent-cyan); font-size: 2rem;">Capturas de Pantalla del Proyecto
+        </h2>
+        <div class="screenshot-grid">
+            <!-- Instrucción: Reemplaza las rutas del 'src' con tus capturas reales u óptimas en '/imagenes' -->
+            <div class="screenshot-card">
+                <img src="imagenes/proyectos/img_restaurante/inicio.png" alt="Captura Principal" onclick="openLightbox(this.src, 'Inicio del Panel Administrativo')">
+                <div class="screenshot-caption">Inicio del Panel Administrativo</div>
+            </div>
+            <div class="screenshot-card">
+                <img src="imagenes/proyectos/img_restaurante/ingredientes.png" alt="Formulario Ingredientes" onclick="openLightbox(this.src, 'Gestor de ingredientes')">
+                <div class="screenshot-caption">Gestor de ingredientes</div>
+            </div>
+            <div class="screenshot-card">
+                <img src="imagenes/proyectos/img_restaurante/bases.png" alt="Motor Costos" onclick="openLightbox(this.src, 'Gestión de bases')">
+                <div class="screenshot-caption">Gestión de bases</div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Modal Lightbox -->
+    <div id="lightbox" class="lightbox" onclick="closeLightbox(event)">
+        <span class="lightbox-close" onclick="closeLightbox(event)">&times;</span>
+        <img class="lightbox-content" id="lightbox-img" onclick="event.stopPropagation()">
+        <div id="lightbox-caption" class="lightbox-caption-text" onclick="event.stopPropagation()"></div>
+    </div>
+
+    <footer class="footer">
+        <div class="footer-bottom">
+            <div class="copyright">
+                © 2026 Luna Lab. Todos los derechos reservados.
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        // Funcionalidad Lightbox para ampliar imágenes
+        function openLightbox(imgSrc, captionText) {
+            const lightbox = document.getElementById('lightbox');
+            const lightboxImg = document.getElementById('lightbox-img');
+            const lightboxCaption = document.getElementById('lightbox-caption');
+            
+            // Cargar datos
+            lightboxImg.src = imgSrc;
+            lightboxCaption.innerHTML = captionText;
+            
+            // Mostrar modal
+            lightbox.style.display = "block";
+            
+            // Prevenir scroll en la pagina principal
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeLightbox(event) {
+            // Cerramos asegurándonos de prevenir conflictos de burbuja
+            if (event) {
+                event.stopPropagation();
+            }
+            document.getElementById('lightbox').style.display = "none";
+            document.body.style.overflow = 'auto'; // Restaurar scroll
+        }
+        
+        // Cerrar con tecla Escape
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                closeLightbox();
+            }
+        });
+    </script>
+</body>
+
+</html>
