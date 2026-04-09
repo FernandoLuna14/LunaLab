@@ -36,6 +36,14 @@ const portfolioData = [
         tech: ['Node.js', 'WhatsApp Web', 'Google Spreadsheets API', 'Generadores QR', 'Express.js'],
         link: 'proyecto-bot.html'
     }
+    , {
+        id: 4,
+        title: 'Sitio Web de Peluquería de Mascotas',
+        description: 'Landing page muy elegante y completamente responsiva para una estética, farmacia y spa canino y felino, con animaciones fluidas.',
+        image: 'imagenes/proyectos/mascotas.png',
+        tech: ['HTML5', 'CSS3', 'JavaScript'],
+        link: 'peluqueria-mascotas/index.html'
+    }
 ];
 
 // Datos de habilidades
